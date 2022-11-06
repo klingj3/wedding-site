@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/wedding-site/static/css/main.0606e5b3.css",
-    "main.js": "/wedding-site/static/js/main.f28b511e.js",
-    "static/js/787.62449090.chunk.js": "/wedding-site/static/js/787.62449090.chunk.js",
-    "static/media/boat-backdrop.jpg": "/wedding-site/static/media/boat-backdrop.180256195fef48c1689b.jpg",
-    "static/media/camden-harbor.jpg": "/wedding-site/static/media/camden-harbor.ef6852b4add15770da5c.jpg",
-    "static/media/logo.svg": "/wedding-site/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/wedding-site/index.html",
-    "main.0606e5b3.css.map": "/wedding-site/static/css/main.0606e5b3.css.map",
-    "main.f28b511e.js.map": "/wedding-site/static/js/main.f28b511e.js.map",
-    "787.62449090.chunk.js.map": "/wedding-site/static/js/787.62449090.chunk.js.map"
+    "main.css": "/static/css/main.0606e5b3.css",
+    "main.js": "/static/js/main.8175686e.js",
+    "static/js/787.62449090.chunk.js": "/static/js/787.62449090.chunk.js",
+    "static/media/boat-backdrop.jpg": "/static/media/boat-backdrop.180256195fef48c1689b.jpg",
+    "static/media/camden-harbor.jpg": "/static/media/camden-harbor.ef6852b4add15770da5c.jpg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.0606e5b3.css.map": "/static/css/main.0606e5b3.css.map",
+    "main.8175686e.js.map": "/static/js/main.8175686e.js.map",
+    "787.62449090.chunk.js.map": "/static/js/787.62449090.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0606e5b3.css",
-    "static/js/main.f28b511e.js"
+    "static/js/main.8175686e.js"
   ]
 }
