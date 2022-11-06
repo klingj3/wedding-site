@@ -16,3 +16,8 @@ export const InnerSection = styled.div`
   padding: 50px;
   max-width: 950px;  
 `;
+
+export const ImageBox = styled.img`
+    border-radius: 5px;
+    height: 500px;  
+`;
