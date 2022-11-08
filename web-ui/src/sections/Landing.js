@@ -13,7 +13,7 @@ const Names = styled.h1`
 const Date = styled.h3`
   font-size: 60px;
   font-family: "Benne";
-  margin-top: 0px;
+  line-height: 30px;
 `;
 
 const Invitation = styled.div`
@@ -28,15 +28,14 @@ const Invitation = styled.div`
     font-weight: lighter;
     font-size: 25px;  
     margin-top: 10px;
-    margin-bottom: -20px;
   }
 
 @keyframes example {
-  0% {transform: rotateX(5deg) rotateY(-10deg); filter: brightness(0.8); color: darkgoldenrod;}
-  25% {transform: rotateX(0deg) rotateY(0deg); filter: brightness(1); color: gold;}
-  50% {transform: rotateX(5deg) rotateY(10deg); filter: brightness(0.8); color: darkgoldenrod;}
-  75% {transform: rotateX(0deg) rotateY(0deg); filter: brightness(1); color: gold;}
-  100% {transform: rotateX(5deg) rotateY(-10deg); filter: brightness(0.8); color: darkgoldenrod;}
+  0% {transform: rotateX(5deg) rotateY(-10deg); filter: brightness(0.8); color: gold;}
+  25% {transform: rotateX(0deg) rotateY(0deg); filter: brightness(1); color: darkgoldenrod;}
+  50% {transform: rotateX(5deg) rotateY(10deg); filter: brightness(0.92); color: gold;}
+  75% {transform: rotateX(0deg) rotateY(0deg); filter: brightness(1); color: darkgoldenrod;}
+  100% {transform: rotateX(5deg) rotateY(-10deg); filter: brightness(0.92); color: gold;}
 }
     
   opacity: 0.95;
@@ -102,7 +101,18 @@ export const LandingSection = () => {
                         June 10th 2023
                     </Date>
                     <p>
-                        Content here TBD
+                        <br />
+                        <br />
+                        <span style={{fontSize: '20px', fontWeight: 'lighter'}} >(Website in Development - Dates Not Final)</span>
+                        <br />
+                        <br />
+                        <h3>SCHEDULE OF EVENTS</h3>
+                        <p>
+                        3 PM - Ceremony - Harbor Park Ampitheater
+                        <br />
+                        <br />
+                        5 PM - Reception - Camden Yacht Club
+                        </p>
                     </p>
                 </BorderBox>
             </Invitation>

@@ -7,13 +7,13 @@ export const colors = {
 
 export const Section = styled.div`
   height: 100vh;
+  min-height: 800px;
   width: 100%;  
   background-color: ${colors.cream};
 `;
 
 export const InnerSection = styled.div`
   margin: auto;
-  padding: 50px;
   max-width: 950px;  
 `;
 
