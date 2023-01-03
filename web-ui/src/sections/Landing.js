@@ -14,6 +14,8 @@ const Date = styled.h3`
   font-size: 60px;
   font-family: "Benne";
   line-height: 30px;
+  position: relative; 
+  top: 20px;
 `;
 
 const Invitation = styled.div`
@@ -68,8 +70,30 @@ const BorderBox = styled.div`
     border: 2px solid ${colors.charcoal};
 `;
 
+const LinkSpan = styled.div`
+    
+    & a {
+    display: block;
+    font-weight 800;
+    text-decoration: none;
+    margin: 14px;
+    color:  ${colors.charcoal} !important;
+    }
+    
+    & a:hover {
+        text-decoration: underline;
+        color: #0072bf !important;
+        cursor: pointer;
+    }
+`;
+
 const imagePath = require("../static/img/boat-backdrop.jpg");
 
+const Link = ({destinationId, text}) => {
+    return <LinkSpan>
+        <a href={'#' + destinationId}>{text}</a>
+    </LinkSpan>
+};
 
 export const LandingSection = () => {
     return <Section style={{
@@ -95,7 +119,7 @@ export const LandingSection = () => {
                         Molly Kelley
                     </Names>
                     <p>
-                        will he held in Camden, Maine on
+                        will be held in Camden, Maine on
                     </p>
                     <Date>
                         June 10th 2023
@@ -103,16 +127,14 @@ export const LandingSection = () => {
                     <p>
                         <br />
                         <br />
-                        <span style={{fontSize: '20px', fontWeight: 'lighter'}} >(Website in Development - Dates Not Final)</span>
                         <br />
-                        <br />
-                        <h3>SCHEDULE OF EVENTS</h3>
-                        <p>
-                        3 PM - Ceremony - Harbor Park Ampitheater
-                        <br />
-                        <br />
-                        5 PM - Reception - Camden Yacht Club
-                        </p>
+                        Guests are invited to look below for information on
+                        <br/>
+                        <br/>
+                        <Link text="The Ceremony & Reception" destinationId="ceremony"/>
+                        <Link text="Our Story" destinationId="ourStory" />
+                        <Link text="Camden & Accommodations" destinationId="location"/>
+                        <Link text="Things to Do in Maine" destinationId="thingsToDo" />
                     </p>
                 </BorderBox>
             </Invitation>
