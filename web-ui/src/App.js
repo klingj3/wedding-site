@@ -12,6 +12,7 @@ function App() {
       <LandingSection />
       <DayOfSection />
       <OurStorySection />
+      <TownInfoSection />
       <div style={{
         backgroundImage: `url('${imagePath}')`,
         backgroundPositionX: 'right',
@@ -22,7 +23,6 @@ function App() {
         height: '250px',
       }}>
       </div>
-      <TownInfoSection />
     </div>
   );
 }
