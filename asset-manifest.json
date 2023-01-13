@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3a0fbaa8.css",
-    "main.js": "/static/js/main.f68b35e1.js",
+    "main.js": "/static/js/main.d7777038.js",
     "static/js/787.62449090.chunk.js": "/static/js/787.62449090.chunk.js",
     "static/media/boat-backdrop.jpg": "/static/media/boat-backdrop.180256195fef48c1689b.jpg",
     "static/media/09.jpg": "/static/media/09.611b8d23b5af350ba634.jpg",
@@ -14,16 +14,15 @@
     "static/media/05.jpg": "/static/media/05.2d029b7f2a8f44e16e55.jpg",
     "static/media/01.jpg": "/static/media/01.a36c2df2777256132e35.jpg",
     "static/media/camden-yacht-club.jpg": "/static/media/camden-yacht-club.ffa64e2b78e99e3cb09c.jpg",
-    "static/media/04.jpg": "/static/media/04.72722c9feea8f9f5a8dd.jpg",
     "static/media/02.jpg": "/static/media/02.5a40e6f2e73cc39ebca6.jpg",
     "static/media/03.jpg": "/static/media/03.05ab43af8550973ba9d2.jpg",
     "index.html": "/index.html",
     "main.3a0fbaa8.css.map": "/static/css/main.3a0fbaa8.css.map",
-    "main.f68b35e1.js.map": "/static/js/main.f68b35e1.js.map",
+    "main.d7777038.js.map": "/static/js/main.d7777038.js.map",
     "787.62449090.chunk.js.map": "/static/js/787.62449090.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3a0fbaa8.css",
-    "static/js/main.f68b35e1.js"
+    "static/js/main.d7777038.js"
   ]
 }
