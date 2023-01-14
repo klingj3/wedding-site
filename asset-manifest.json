@@ -1,28 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.3a0fbaa8.css",
-    "main.js": "/static/js/main.d7777038.js",
-    "static/js/787.62449090.chunk.js": "/static/js/787.62449090.chunk.js",
-    "static/media/boat-backdrop.jpg": "/static/media/boat-backdrop.180256195fef48c1689b.jpg",
+    "main.js": "/static/js/main.c10ef827.js",
     "static/media/09.jpg": "/static/media/09.611b8d23b5af350ba634.jpg",
-    "static/media/suprise.jpg": "/static/media/suprise.a7b26be952376f94a823.jpg",
-    "static/media/camden-maine-amp.jpg": "/static/media/camden-maine-amp.65b58cd7d2be26e03a01.jpg",
-    "static/media/camden-harbor.jpg": "/static/media/camden-harbor.ef6852b4add15770da5c.jpg",
+    "static/media/boat-backdrop.jpg": "/static/media/boat-backdrop.a0d9e8ae814b02e8d37c.jpg",
+    "static/media/camden-maine-amp.jpg": "/static/media/camden-maine-amp.55fe8ddba46c20cbcd86.jpg",
     "static/media/08.jpg": "/static/media/08.9c3facffa11c5bf0ba93.jpg",
+    "static/media/camden-harbor.jpg": "/static/media/camden-harbor.1b130197af4db6567263.jpg",
     "static/media/07.jpg": "/static/media/07.ac378f2b7ef748cc01f0.jpg",
     "static/media/06.jpg": "/static/media/06.7c8b5c037e15404f3da0.jpg",
     "static/media/05.jpg": "/static/media/05.2d029b7f2a8f44e16e55.jpg",
     "static/media/01.jpg": "/static/media/01.a36c2df2777256132e35.jpg",
-    "static/media/camden-yacht-club.jpg": "/static/media/camden-yacht-club.ffa64e2b78e99e3cb09c.jpg",
+    "static/media/camden-yacht-club.jpg": "/static/media/camden-yacht-club.9ef7d56e5886a439572e.jpg",
     "static/media/02.jpg": "/static/media/02.5a40e6f2e73cc39ebca6.jpg",
     "static/media/03.jpg": "/static/media/03.05ab43af8550973ba9d2.jpg",
     "index.html": "/index.html",
     "main.3a0fbaa8.css.map": "/static/css/main.3a0fbaa8.css.map",
-    "main.d7777038.js.map": "/static/js/main.d7777038.js.map",
-    "787.62449090.chunk.js.map": "/static/js/787.62449090.chunk.js.map"
+    "main.c10ef827.js.map": "/static/js/main.c10ef827.js.map"
   },
   "entrypoints": [
     "static/css/main.3a0fbaa8.css",
-    "static/js/main.d7777038.js"
+    "static/js/main.c10ef827.js"
   ]
 }
