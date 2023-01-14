@@ -89,7 +89,7 @@ const LinkSpan = styled.div`
 
 const imagePath = require("../static/img/boat-backdrop.jpg");
 
-const Link = ({destinationId, text}) => {
+const SectionLink = ({destinationId, text}) => {
     return <LinkSpan>
         <a href={'#' + destinationId}>{text}</a>
     </LinkSpan>
@@ -131,10 +131,10 @@ export const LandingSection = () => {
                         Guests are invited to look below for information on
                         <br/>
                         <br/>
-                        <Link text="The Ceremony & Reception" destinationId="ceremony"/>
-                        <Link text="Our Story" destinationId="ourStory" />
-                        <Link text="Camden & Accommodations" destinationId="location"/>
-                        <Link text="Things to Do in Maine" destinationId="thingsToDo" />
+                        <SectionLink text="The Ceremony & Reception" destinationId="ceremony"/>
+                        <SectionLink text="Our Story" destinationId="ourStory" />
+                        <SectionLink text="Camden & Accommodations" destinationId="location"/>
+                        <SectionLink text="Things to Do in Maine" destinationId="thingsToDo" />
                     </p>
                 </BorderBox>
             </Invitation>

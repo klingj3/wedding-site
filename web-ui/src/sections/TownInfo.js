@@ -21,10 +21,10 @@ const imagePath = require("../static/img/camden-harbor.jpg");
 export const TownInfoSection = () => {
     return (
     <div>
-        <DarkFittedSection>
+        <DarkFittedSection style={{paddingBottom: "30px"}}>
             <SectionHeader id="location">The Location</SectionHeader>
             <InnerSection>
-                <ImageBox src={imagePath} style={{width: '100%', objectFit: 'cover', objectPosition: 'top'}}/>
+                <ImageBox src={imagePath} style={{width: '100%', objectFit: 'cover', objectPosition: 'top', marginTop: '40px'}}/>
                 <div className="centered-descriptor">
                     <h3>
                         Camden, Maine

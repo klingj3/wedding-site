@@ -50,6 +50,7 @@ export const InnerSection = styled.div`
 export const SectionHeader = styled.h2`
     pre-wrap: none;
     margin: 0px;
+    height: 70px;
 `;
 export const ColumnContainer = styled.div`
     display: flex;

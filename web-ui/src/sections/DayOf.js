@@ -41,7 +41,7 @@ const yachtpath = require("../static/img/camden-yacht-club.jpg");
 export const DayOfSection = () => {
     return (<DayOfStyledSection id={"ceremony"}>
             <SectionHeader>Ceremony & Reception</SectionHeader>
-            <div style={{fontStyle: 'italic', marginTop: '-12px'}}> Event times will be added approximately a month prior to the wedding </div>
+            <div style={{fontStyle: 'italic', marginTop: '12px'}}> Event times will be added approximately a month prior to the wedding </div>
             <InnerSection>
                 <ColumnContainer>
                     <Column>
