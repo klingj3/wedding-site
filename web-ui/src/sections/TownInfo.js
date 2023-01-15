@@ -111,7 +111,7 @@ export const TownInfoSection = () => {
                 </ColumnContainer>
                 <ColumnContainer id={"thingsToDo"}>
                     <Column>
-                        <h3>Hiking</h3>
+                        <h3>Exploring the Outdoors</h3>
                         <p>
                             Camden, Maine is a major tourist destination for a reason, and has lots to offer wedding guests
                             visiting from away.

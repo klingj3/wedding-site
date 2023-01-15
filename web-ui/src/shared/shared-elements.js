@@ -10,9 +10,13 @@ export const colors = {
 export const Section = styled.div`
   height: 100vh;
   min-height: 800px;
-  width: 100%;  
   background-color: ${colors.cream};
   padding: 15px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 10px; 
 `;
 
 export const ImageBox = styled.img`
@@ -21,6 +25,8 @@ export const ImageBox = styled.img`
 `;
 export const FittedSection = styled(Section)`
     height: fit-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
 `;
 
 export const DarkFittedSection = styled(FittedSection)`

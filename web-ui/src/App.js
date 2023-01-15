@@ -4,28 +4,29 @@ import {TownInfoSection} from "./sections/TownInfo";
 import {OurStorySection} from "./sections/OurStory";
 import {DayOfSection} from "./sections/DayOf";
 import {Countdown} from "./decor/countdown";
+import styled from 'styled-components';
 
 const imagePath = require('./static/img/boat-backdrop.jpg');
 
+const AppContainer = styled.div`
+    
+        background-image: url('${imagePath}');
+        background-position-z: right;
+        background-Position-y: bottom;
+        background-size: cover;
+        background-attachment: fixed;
+`;
+
+
 function App() {
   return (
-    <div className="App">
+    <AppContainer className="App">
       <LandingSection />
       <DayOfSection />
       <OurStorySection />
       <TownInfoSection />
-      <div style={{
-        backgroundImage: `url('${imagePath}')`,
-        backgroundPositionX: 'right',
-        backgroundPositionY: 'bottom',
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed',
-        width: '100%',
-        height: '250px',
-      }}>
         <Countdown />
-      </div>
-    </div>
+    </AppContainer>
   );
 }
 

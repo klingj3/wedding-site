@@ -18,7 +18,8 @@ const Date = styled.h3`
   top: 20px;
 `;
 
-const Invitation = styled.div`
+const
+    Invitation = styled.div`
   & h3 {
     margin: inherit;
     color: ${colors.charcoal};
@@ -97,10 +98,7 @@ const SectionLink = ({destinationId, text}) => {
 
 export const LandingSection = () => {
     return <Section style={{
-        backgroundImage: `url('${imagePath}')`,
-        backgroundPositionX: 'right',
-        backgroundPositionY: 'bottom',
-        backgroundSize: 'cover',
+        backgroundColor: 'transparent',
         display: 'flex',
     }}>
         <div style={{margin: '20px', width: '100%', marginTop: 'auto', marginBottom: 'auto'}}>

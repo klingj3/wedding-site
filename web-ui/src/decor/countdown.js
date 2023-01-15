@@ -75,7 +75,7 @@ export const Countdown = () => {
             clearInterval(x);
         }
         //seconds
-    }, 2)
+    }, 1000)
 
     return (
         <CountdownContainer id="countdown">

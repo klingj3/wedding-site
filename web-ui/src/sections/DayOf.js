@@ -11,9 +11,6 @@ import styled from 'styled-components';
 
 const DayOfStyledSection = styled(DarkFittedSection)`
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
     & h3 {
         text-align: center;
         font-size: 32px;
