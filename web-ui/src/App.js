@@ -15,6 +15,7 @@ const AppContainer = styled.div`
         background-Position-y: bottom;
         background-size: cover;
         background-attachment: fixed;
+        margin-bottom: -15px;
 `;
 
 

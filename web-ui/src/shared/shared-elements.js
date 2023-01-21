@@ -15,7 +15,7 @@ export const Section = styled.div`
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 10px; 
 `;
 
@@ -69,4 +69,24 @@ export const Column = styled.div`
     width: 100%;
     text-align: left; 
     margin-right: 40px;
+`;
+
+export const LinkSpan = styled.div`
+    
+    font-family: "Benne";
+    font-size: 25px;
+    
+    & a {
+        display: block;
+        font-weight 800;
+        text-decoration: none;
+        margin: 14px;
+        color:  ${colors.charcoal} !important;
+    }
+    
+    & a:hover {
+        text-decoration: none;
+        color: #0072bf !important;
+        cursor: pointer;
+    }
 `;

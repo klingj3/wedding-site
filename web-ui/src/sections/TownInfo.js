@@ -4,9 +4,10 @@ import {
     ImageBox,
     SectionHeader,
     FittedSection,
-    InnerSection, DarkFittedSection
+    InnerSection, DarkFittedSection, LinkSpan, colors
 } from "../shared/shared-elements";
 import styled from 'styled-components';
+import {useState} from "react";
 
 
 const PriceText = styled.span`
@@ -16,12 +17,50 @@ const PriceText = styled.span`
      margin-left: 3px;
 `;
 
+const OptionContainer = styled.div`
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+    & a {
+    }
+    
+    & a:hover {
+    }
+`;
+
+const Option = styled(LinkSpan)`
+     ${props => props.active && `
+        text-decoration: underline;
+    `};
+
+`;
+
+const ActivitySection = styled(Column)`
+     ${props => props.visible && `
+        display: block;
+    `};
+    ${props => !props.visible && `
+        display: none;
+    `};
+`;
+
+const ActivitySectionContainer = styled.div`
+    max-width: 700px;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+`;
+
 const imagePath = require("../static/img/camden-harbor.jpg");
 
 export const TownInfoSection = () => {
+
+    const [activeSection, setActiveSection] = useState(null);
+
     return (
     <div>
-        <DarkFittedSection style={{paddingBottom: "30px"}}>
+        <FittedSection style={{paddingBottom: "30px"}}>
             <SectionHeader id="location">The Location</SectionHeader>
             <InnerSection>
                 <ImageBox src={imagePath} style={{width: '100%', objectFit: 'cover', objectPosition: 'top', marginTop: '40px'}}/>
@@ -39,13 +78,23 @@ export const TownInfoSection = () => {
                         that this beautiful area has to offer!
                     </p>
                 </div>
-            </InnerSection>
-        </DarkFittedSection>
-        <FittedSection>
-            <InnerSection>
-                <ColumnContainer>
-                    <Column>
-                        <h3>Accommodations</h3>
+                <span style={{fontStyle: "italic", position: "relative", marginTop: '20px', top: '10px', }}>
+                    Click for Information On
+                </span>
+                <br />
+                <OptionContainer>
+                    <Option active={activeSection === "accommodations"}>
+                        <a onClick={() => setActiveSection("accommodations")}>Accommodations</a>
+                    </Option>
+                    <Option active={activeSection === "restaurants"}>
+                        <a onClick={() => setActiveSection("restaurants")}>Restaurants</a>
+                    </Option>
+                    <Option active={activeSection === "activities"}>
+                        <a onClick={() => setActiveSection("activities")}>Activities</a>
+                    </Option>
+                </OptionContainer>
+                <ActivitySectionContainer>
+                    <ActivitySection visible={activeSection === "accommodations"}>
                         <p>
                             As a tourist destination, Camden and the neighboring towns have a number of hotels available.
 
@@ -85,9 +134,8 @@ export const TownInfoSection = () => {
                                 cheaper as you get farther from Camden.
                             </h4>
                         </ul>
-                     </Column>
-                    <Column>
-                        <h3>Recommended Restaurants</h3>
+                     </ActivitySection>
+                    <ActivitySection visible={activeSection === "restaurants"}>
                         <p>
                             Camden has a lot of great restaurants and you will be hard-pressed to find a bad meal in town.
                             Some highlights include:
@@ -107,11 +155,8 @@ export const TownInfoSection = () => {
                         </li>
                         <li><b>Peter Ott's on the Water</b> - Best view in Camden and a varied menu.</li>
                         </ul>
-                    </Column>
-                </ColumnContainer>
-                <ColumnContainer id={"thingsToDo"}>
-                    <Column>
-                        <h3>Exploring the Outdoors</h3>
+                    </ActivitySection>
+                    <ActivitySection visible={activeSection === "activities"}>
                         <p>
                             Camden, Maine is a major tourist destination for a reason, and has lots to offer wedding guests
                             visiting from away.
@@ -144,8 +189,8 @@ export const TownInfoSection = () => {
                                 picnic house at the top. The treeless hill affords a beautiful view of the sea, and is one of the nicest walks in the area.
                             </li>
                         </ul>
-                    </Column>
-                </ColumnContainer>
+                    </ActivitySection>
+                </ActivitySectionContainer>
             </InnerSection>
         </FittedSection>
     </div>)

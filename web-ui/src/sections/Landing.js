@@ -1,6 +1,5 @@
-import {InnerSection, Section, colors} from "../shared/shared-elements";
+import {colors, LinkSpan, Section} from "../shared/shared-elements";
 import styled from 'styled-components';
-import {MenuBar} from "../menu/MenuBar";
 
 const Names = styled.h1`
     margin: auto;
@@ -70,25 +69,6 @@ const BorderBox = styled.div`
     height: 100%; width: 100%;
     border: 2px solid ${colors.charcoal};
 `;
-
-const LinkSpan = styled.div`
-    
-    & a {
-    display: block;
-    font-weight 800;
-    text-decoration: none;
-    margin: 14px;
-    color:  ${colors.charcoal} !important;
-    }
-    
-    & a:hover {
-        text-decoration: underline;
-        color: #0072bf !important;
-        cursor: pointer;
-    }
-`;
-
-const imagePath = require("../static/img/boat-backdrop.jpg");
 
 const SectionLink = ({destinationId, text}) => {
     return <LinkSpan>
