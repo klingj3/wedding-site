@@ -1,13 +1,12 @@
 import {
     Column,
-    ColumnContainer,
     ImageBox,
     SectionHeader,
     FittedSection,
-    InnerSection, DarkFittedSection, LinkSpan, colors
+    InnerSection, LinkSpan
 } from "../shared/shared-elements";
 import styled from 'styled-components';
-import {useState} from "react";
+import React, {useState} from "react";
 
 
 const PriceText = styled.span`
@@ -33,6 +32,15 @@ const Option = styled(LinkSpan)`
      ${props => props.active && `
         text-decoration: underline;
     `};
+    
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+     ${props => props.delay && `
+        transition-delay: ${props.delay}s;
+    `};
+  &.is-visible {
+      opacity: 1;
+    }
      
 `;
 
@@ -55,7 +63,15 @@ const ActivitySectionContainer = styled.div`
 const imagePath = require("../static/img/camden-harbor.jpg");
 
 export const TownInfoSection = () => {
-
+    const [isVisible, setVisible] = React.useState(true);
+      const domRef = React.useRef();
+      React.useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => setVisible(entry.isIntersecting));
+        });
+        observer.observe(domRef.current);
+        return () => observer.unobserve(domRef.current);
+      }, []);
     const [activeSection, setActiveSection] = useState(null);
 
     return (
@@ -84,22 +100,31 @@ export const TownInfoSection = () => {
                 <br />
                 <OptionContainer>
                     <div onClick={() => setActiveSection("accommodations")}>
-                        <Option active={activeSection === "accommodations"}>
+                        <Option active={activeSection === "accommodations"} delay={"0.20"}
+                          className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+                          ref={domRef}
+                        >
                             <a>Accommodations</a>
                         </Option>
                     </div>
                     <div onClick={() => setActiveSection("restaurants")}>
-                        <Option active={activeSection === "restaurants"}>
+                        <Option active={activeSection === "restaurants"}  delay={"0.55"}
+                          className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+                          ref={domRef}>
                             <a>Restaurants</a>
                         </Option>
                     </div>
                     <div onClick={() => setActiveSection("activities")}>
-                        <Option active={activeSection === "activities"}>
+                        <Option active={activeSection === "activities"}  delay={"0.85"}
+                          className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+                          ref={domRef}>
                             <a>Activities</a>
                         </Option>
                     </div>
                     <div onClick={() => setActiveSection("transportation")}>
-                        <Option active={activeSection === "transportation"}>
+                        <Option active={activeSection === "transportation"}  delay={"1.15"}
+                          className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+                          ref={domRef}>
                             <a>Transportation</a>
                         </Option>
                     </div>

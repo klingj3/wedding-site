@@ -1,5 +1,6 @@
 import {colors, LinkSpan, Section} from "../shared/shared-elements";
 import styled from 'styled-components';
+import React from "react";
 
 const Names = styled.h1`
     margin: auto;
@@ -63,6 +64,15 @@ const
   &:hover {
       box-shadow: 15px 19px 15px -1px rgba(0,0,0,0.54);
   }
+      
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+         }
+    }
 `;
 
 const BorderBox = styled.div`
@@ -70,13 +80,31 @@ const BorderBox = styled.div`
     border: 2px solid ${colors.charcoal};
 `;
 
-const SectionLink = ({destinationId, text}) => {
-    return <LinkSpan>
+const FadeInDiv = styled.div`
+    opacity: 0;
+    
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+     ${props => props.delay && `
+        animation-delay: ${props.delay}s;
+    `};
+`;
+
+const fadeIn = (element, delay) => {
+    return <FadeInDiv className="fadeIn" delay={delay}>{element}</FadeInDiv>
+}
+
+const SectionLink = ({destinationId, text, delay}) => {
+    return fadeIn(<LinkSpan>
         <a href={'#' + destinationId}>{text}</a>
-    </LinkSpan>
+    </LinkSpan>, delay)
 };
 
 export const LandingSection = () => {
+
+
     return <Section style={{
         backgroundColor: 'transparent',
         display: 'flex',
@@ -84,35 +112,53 @@ export const LandingSection = () => {
         <div style={{margin: '20px', width: '100%', marginTop: 'auto', marginBottom: 'auto'}}>
             <Invitation id="invitation">
                 <BorderBox>
-                    <h3 style={{marginTop: '20px'}}>
-                        THE WEDDING OF
-                    </h3>
-                    <Names>
-                        Jake Klingelhofer
-                    </Names>
-                    <h3>
-                        and
-                    </h3>
-                    <Names style={{position: 'relative', bottom: '20px'}}>
-                        Molly Kelley
-                    </Names>
-                    <p>
+                    {
+                        fadeIn(                    <h3 style={{marginTop: '20px'}}>
+                            THE WEDDING OF
+                        </h3>, 0.1)
+                    }
+                    {
+                     fadeIn(
+                         <>
+                        <Names>
+                            Jake Klingelhofer
+                        </Names>
+                        <h3>
+                            and
+                        </h3>
+                        <Names style={{position: 'relative', bottom: '20px'}}>
+                            Molly Kelley
+                        </Names></>,
+                        0.5
+                     )
+                    }
+                    {
+                        fadeIn(                    <p>
                         will be held in Camden, Maine on
-                    </p>
-                    <Date>
+                    </p>, 1.5)
+                    }
+                    {
+                    fadeIn(<Date>
                         June 10th 2023
-                    </Date>
-                    <p>
-                        <br />
-                        <br />
-                        <br />
-                        Guests are invited to look below for information on
-                        <br/>
-                        <br/>
-                        <SectionLink text="The Ceremony & Reception" destinationId="ceremony"/>
-                        <SectionLink text="Our Story" destinationId="ourStory" />
-                        <SectionLink text="Camden, Maine" destinationId="location"/>
-                    </p>
+                    </Date>, 2.2)
+                    }
+                    {
+                        fadeIn(
+                            <p>
+                                <br />
+                                <br />
+                                <br />
+                                Guests are invited to look below for information on
+                                <br/>
+                                <br/>
+                                <br/>
+                                <SectionLink text="The Ceremony & Reception" destinationId="ceremony" delay={"4.30"}/>
+                                <SectionLink text="Our Story" destinationId="ourStory"   delay={"4.6"}/>
+                                <SectionLink text="Camden, Maine" destinationId="location"  delay={"4.9"}/>
+                            </p>,
+                            3.7
+                        )
+                    }
                 </BorderBox>
             </Invitation>
         </div>
