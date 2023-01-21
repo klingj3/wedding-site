@@ -9,13 +9,11 @@ import styled from 'styled-components';
 const imagePath = require('./static/img/boat-backdrop.jpg');
 
 const AppContainer = styled.div`
-    
-        background-image: url('${imagePath}');
-        background-position-z: right;
-        background-Position-y: bottom;
-        background-size: cover;
-        background-attachment: fixed;
-        margin-bottom: -15px;
+    background-image: url('${imagePath}');
+    background-position-z: right;
+    background-Position-y: bottom;
+    background-size: cover;
+    background-attachment: fixed;
 `;
 
 
@@ -26,7 +24,7 @@ function App() {
       <DayOfSection />
       <OurStorySection />
       <TownInfoSection />
-        <Countdown />
+      <Countdown />
     </AppContainer>
   );
 }

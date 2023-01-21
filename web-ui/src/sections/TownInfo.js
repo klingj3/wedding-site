@@ -33,7 +33,7 @@ const Option = styled(LinkSpan)`
      ${props => props.active && `
         text-decoration: underline;
     `};
-
+     
 `;
 
 const ActivitySection = styled(Column)`
@@ -83,15 +83,26 @@ export const TownInfoSection = () => {
                 </span>
                 <br />
                 <OptionContainer>
-                    <Option active={activeSection === "accommodations"}>
-                        <a onClick={() => setActiveSection("accommodations")}>Accommodations</a>
-                    </Option>
-                    <Option active={activeSection === "restaurants"}>
-                        <a onClick={() => setActiveSection("restaurants")}>Restaurants</a>
-                    </Option>
-                    <Option active={activeSection === "activities"}>
-                        <a onClick={() => setActiveSection("activities")}>Activities</a>
-                    </Option>
+                    <div onClick={() => setActiveSection("accommodations")}>
+                        <Option active={activeSection === "accommodations"}>
+                            <a>Accommodations</a>
+                        </Option>
+                    </div>
+                    <div onClick={() => setActiveSection("restaurants")}>
+                        <Option active={activeSection === "restaurants"}>
+                            <a>Restaurants</a>
+                        </Option>
+                    </div>
+                    <div onClick={() => setActiveSection("activities")}>
+                        <Option active={activeSection === "activities"}>
+                            <a>Activities</a>
+                        </Option>
+                    </div>
+                    <div onClick={() => setActiveSection("transportation")}>
+                        <Option active={activeSection === "transportation"}>
+                            <a>Transportation</a>
+                        </Option>
+                    </div>
                 </OptionContainer>
                 <ActivitySectionContainer>
                     <ActivitySection visible={activeSection === "accommodations"}>
@@ -187,6 +198,80 @@ export const TownInfoSection = () => {
                                 <b>Beech Hill Preserve</b> - In Rockport, just a few minutes from Jake's old house, there's
                                 a beautiful walk up Beech Hill, a large blueberry field-covered hill with an old stone
                                 picnic house at the top. The treeless hill affords a beautiful view of the sea, and is one of the nicest walks in the area.
+                            </li>
+                        </ul>
+                    </ActivitySection>
+                    <ActivitySection visible={activeSection === "transportation"}>
+                            <h3>By Plane</h3>
+                        <p>
+                            These days, I find <a href={"https://www.kayak.com/flights/JFK-PWM,RKD,BGR/2023-06-09/2023-06-12?sort=bestflight_a&fs=airports=AUG,OR7,PWM,RKD,BGR,G6L,JFK"}>
+                                Kayak</a> to be the best way to find deals on flights, as it allows you to select multiple
+                            possible origin and destination airports. <a href={"https://www.kayak.com/flights/JFK-PWM,RKD,BGR/2023-06-09/2023-06-12?sort=bestflight_a&fs=airports=AUG,OR7,PWM,RKD,BGR,G6L,JFK"}>
+                            This link </a> is pre-filled for the wedding weekend dates and possible destination airports,
+                            updating your search with your preferred origin airport(s) is a great way to make travel plans.
+
+                            <br/><br/>
+                            However, while the above may be the best way of finding deals on flights, with all the
+                            issues facing airlines recently booking directly with the airline, rather than through
+                            Kayak's 3rd party vendors, is the safest option for the possible need of refunds or flight changes.
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Portland International Jetport (PWM)</b> - For most guests coming from away, this
+                                will be your most common point of entry. Maine's largest airport, PWM has direct flights
+                                daily from most major cities on the east coast and in the midwest. In my experience, 
+                                JetBlue tends to have the most reliable service and typically the cheapest prices
+                                flying into Portland.
+                                <br />
+                                Hertz, Avis, and Enterprise car rental are all available at the airport, with Camden
+                                being about 1 Hr 45 Minutes away.
+                            </li>
+                            <li>
+                                <b>Knox County Regional Airport (RKD)</b> - There is a very small regional airport 
+                                in Rockland, about 20 minutes from Camden. This airport only takes the sedan-sized
+                                6-seater planes flown by Cape Air, typically from Boston connections. Normally this
+                                is a fair bit more expensive than flying to Portland, but is an option worth looking at
+                                if you are not scared by small planes and want to cut down on your driving time.
+                                <br />
+                                There are some small car rental options available, but at this distance you'll
+                                likely be fine just taxi-ing into the city.
+                            </li>
+                            <li>
+                                Augusta State Airport and Bangor International Airport are two other regional airports
+                                roughly an hour from Camden that may be worth looking at, but neither are likely to
+                                be the best option.
+                            </li>
+                        </ul>
+                        <h3> By Bus </h3>
+                        <ul>
+                            <li>
+                                <b>Concord Coach</b> - Concord Coach busses are always really comfortable and reliable,
+                                and with the current unreliability of air travel may be a faster and more convenient
+                                way of getting to Maine. Routes which may be helpful are:
+                                <ul>
+                                    <li>
+                                        <b> NYC -> Portland </b> - When going from NYC to Maine, I always prefer the
+                                        Concord Coach to flying. These busses are extremely spacious and comfortable,
+                                        with tons of legroom and deep reclining seats. Tickets are just $70 each way,
+                                        and without the need for early arrival or security is competitive time-wise
+                                        with flying. Just make sure to book in advance, as these do sell out regularly.
+                                    </li>
+                                    <li>
+                                        <b> Boston -> Portland </b> - If you're finding cheap flights to Boston
+                                        but not to Portland, Concord coach does hourly pickups from all terminals
+                                        at the Boston airport, and can take you straight from there to Portland.
+                                    </li>
+                                </ul>
+                                For either of the above, you'll need to Uber/Taxi the 10 minute trip to the airport to
+                                rent a car. As an alternative to renting a car,
+                                <ul>
+                                    <li>
+                                        <b> Portland -> Camden </b> - The bus can bring you from the Portland Bus Terminal to Camden itself.
+                                        Unfortunately, the drop-off point is about a mile outside of downtown
+                                        so some Taxi use will still be required. However, this bus does not run frequently,
+                                        typically just once or twice a day during the summer.
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </ActivitySection>
