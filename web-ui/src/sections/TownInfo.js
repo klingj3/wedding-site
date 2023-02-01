@@ -63,11 +63,11 @@ const ActivitySectionContainer = styled.div`
 const imagePath = require("../static/img/camden-harbor.jpg");
 
 export const TownInfoSection = () => {
-    const [isVisible, setVisible] = React.useState(true);
+    const [isVisible, setVisible] = React.useState(false);
       const domRef = React.useRef();
       React.useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => setVisible(entry.isIntersecting));
+          entries.forEach(entry => setVisible(isVisible || entry.isIntersecting));
         });
         observer.observe(domRef.current);
         return () => observer.unobserve(domRef.current);

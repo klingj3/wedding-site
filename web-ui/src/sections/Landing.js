@@ -49,7 +49,7 @@ const
   height: 40vh;
   max-width: 700px;
   min-width: 500px;
-  min-height: 700px;
+  min-height: 600px;
   background-color: ${colors.cream};
   margin: auto;
   padding: 30px;
@@ -65,14 +65,6 @@ const
       box-shadow: 15px 19px 15px -1px rgba(0,0,0,0.54);
   }
       
-    @keyframes fadeInAnimation {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-         }
-    }
 `;
 
 const BorderBox = styled.div`
@@ -96,10 +88,10 @@ const fadeIn = (element, delay) => {
     return <FadeInDiv className="fadeIn" delay={delay}>{element}</FadeInDiv>
 }
 
-const SectionLink = ({destinationId, text, delay}) => {
-    return fadeIn(<LinkSpan>
+const SectionLink = ({destinationId, text}) => {
+    return <LinkSpan>
         <a href={'#' + destinationId}>{text}</a>
-    </LinkSpan>, delay)
+    </LinkSpan>
 };
 
 export const LandingSection = () => {
@@ -112,53 +104,36 @@ export const LandingSection = () => {
         <div style={{margin: '20px', width: '100%', marginTop: 'auto', marginBottom: 'auto'}}>
             <Invitation id="invitation">
                 <BorderBox>
-                    {
-                        fadeIn(                    <h3 style={{marginTop: '20px'}}>
+                    <h3 style={{marginTop: '20px'}}>
                             THE WEDDING OF
-                        </h3>, 0.1)
-                    }
-                    {
-                     fadeIn(
-                         <>
-                        <Names>
-                            Jake Klingelhofer
-                        </Names>
-                        <h3>
-                            and
-                        </h3>
-                        <Names style={{position: 'relative', bottom: '20px'}}>
-                            Molly Kelley
-                        </Names></>,
-                        0.5
-                     )
-                    }
-                    {
-                        fadeIn(                    <p>
+                    </h3>
+                     <>
+                    <Names>
+                        Jake Klingelhofer
+                    </Names>
+                    <h3>
+                        and
+                    </h3>
+                    <Names style={{position: 'relative', bottom: '20px'}}>
+                        Molly Kelley
+                    </Names></>
+                    <p>
                         will be held in Camden, Maine on
-                    </p>, 1.5)
-                    }
-                    {
-                    fadeIn(<Date>
+                    </p>
+                    <Date>
                         June 10th 2023
-                    </Date>, 2.2)
-                    }
-                    {
-                        fadeIn(
-                            <p>
-                                <br />
-                                <br />
-                                <br />
-                                Guests are invited to look below for information on
-                                <br/>
-                                <br/>
-                                <br/>
-                                <SectionLink text="The Ceremony & Reception" destinationId="ceremony" delay={"4.30"}/>
-                                <SectionLink text="Our Story" destinationId="ourStory"   delay={"4.6"}/>
-                                <SectionLink text="Camden, Maine" destinationId="location"  delay={"4.9"}/>
-                            </p>,
-                            3.7
-                        )
-                    }
+                    </Date>
+                    <p>
+                        <br />
+                        <br />
+                        <br />
+                        Guests are invited to look below for information on
+                        <br/>
+                        <br/>
+                        <SectionLink text="The Ceremony & Reception" destinationId="ceremony" />
+                        <SectionLink text="Our Story" destinationId="ourStory" />
+                        <SectionLink text="Camden, Maine" destinationId="location" />
+                    </p>
                 </BorderBox>
             </Invitation>
         </div>
