@@ -3,6 +3,7 @@ import {LandingSection} from "./sections/Landing";
 import {TownInfoSection} from "./sections/TownInfo";
 import {OurStorySection} from "./sections/OurStory";
 import {DayOfSection} from "./sections/DayOf";
+import {RegistrySection} from "./sections/Registry";
 import {FaqSection} from "./sections/FAQ";
 import {Countdown} from "./decor/countdown";
 import styled from 'styled-components';
@@ -28,6 +29,7 @@ function App() {
       <LandingSection />
       <DayOfSection />
       <OurStorySection />
+      <RegistrySection />
       <TownInfoSection />
       <FaqSection />
       <Countdown />

@@ -130,6 +130,7 @@ export const LandingSection = () => {
                         <br/>
                         <SectionLink text="The Ceremony & Reception" destinationId="ceremony" />
                         <SectionLink text="Our Story" destinationId="ourStory" />
+                        <SectionLink text="RSVP & Registry" destinationId="registry" />
                         <SectionLink text="Camden, Maine" destinationId="location" />
                         <SectionLink text="Common Questions" destinationId="faq" />
                     </p>
