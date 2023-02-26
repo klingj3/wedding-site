@@ -3,6 +3,7 @@ import {LandingSection} from "./sections/Landing";
 import {TownInfoSection} from "./sections/TownInfo";
 import {OurStorySection} from "./sections/OurStory";
 import {DayOfSection} from "./sections/DayOf";
+import {FaqSection} from "./sections/FAQ";
 import {Countdown} from "./decor/countdown";
 import styled from 'styled-components';
 
@@ -14,6 +15,10 @@ const AppContainer = styled.div`
     background-Position-y: bottom;
     background-size: cover;
     background-attachment: fixed;
+    
+    hr {
+        opacity: 0.2;
+    }
 `;
 
 
@@ -24,6 +29,7 @@ function App() {
       <DayOfSection />
       <OurStorySection />
       <TownInfoSection />
+      <FaqSection />
       <Countdown />
     </AppContainer>
   );

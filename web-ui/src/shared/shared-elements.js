@@ -12,7 +12,7 @@ export const Section = styled.div`
   min-height: 800px;
   background-color: ${colors.cream};
   padding: 15px;
-  max-width: 1400px;
+  max-width: 1250px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;

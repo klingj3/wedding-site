@@ -46,10 +46,8 @@ const
   animation-iteration-count: infinite;
   animation-duration: 10s;
   
-  height: 40vh;
   max-width: 700px;
   min-width: 500px;
-  min-height: 600px;
   background-color: ${colors.cream};
   margin: auto;
   padding: 30px;
@@ -133,6 +131,7 @@ export const LandingSection = () => {
                         <SectionLink text="The Ceremony & Reception" destinationId="ceremony" />
                         <SectionLink text="Our Story" destinationId="ourStory" />
                         <SectionLink text="Camden, Maine" destinationId="location" />
+                        <SectionLink text="Common Questions" destinationId="faq" />
                     </p>
                 </BorderBox>
             </Invitation>
